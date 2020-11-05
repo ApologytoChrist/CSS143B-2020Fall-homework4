@@ -17,8 +17,21 @@ public class SortList {
     }
 
     public static ListNode findMidAndBreak(ListNode head) {
-        // homework
+        if (head == null || head.next == null) {
+            return null;
+        }
+        int index = 0;
+
+        findMidHelper(head, index);
+
+
         return null;
+    }
+
+    private static void findMidHelper(ListNode head, int index) {
+        if (head.next != null) {
+            findMidHelper(head.next, index++);
+        }
     }
 
     public static ListNode mergeLists(ListNode list1, ListNode list2) {
