@@ -44,7 +44,7 @@ public class Problem1Test {
 
             List<List<Integer>> results = Permutation.permute(testCase.input);
 
-            assertEquals(listsToString(testCase.expect), listsToString(results));
+            assertEquals("case" + i, listsToString(testCase.expect), listsToString(results));
         }
     }
 
@@ -155,7 +155,7 @@ public class Problem1Test {
         for (int i = 0; i < inputs.length; i++) {
             int actual = BinarySearch.binarySearch(inputs[i], targets[i]);
             int expected = answer[i];
-            assertEquals(expected, actual);
+            assertEquals("case" + i, expected, actual);
         }
     }
 
