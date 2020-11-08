@@ -32,7 +32,7 @@ public class Problem2Test {
             SingleLinkedList list = new SingleLinkedList(inputs[i]);
             SingleLinkedList reversed = new SingleLinkedList(expected[i]);
             list.reverse();
-            assertEquals(reversed, list);
+            assertEquals("case" + i, reversed, list);
         }
     }
 
